@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare Facilities Map – Islamabad and Rawalpindi</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Healthcare Facilities Map – Islamabad and Rawalpindi</h1>
+  <p><strong>Study area:</strong> the twin cities of Islamabad and Rawalpindi, Pakistan. This map shows hospitals, clinics and pharmacies so residents can find nearby care. Select a city, filter by type, or search by name, then click a marker or list item for details.</p>
+</header>
+
+<main>
+  <aside>
+    <div class="controls">
+      <label>City
+        <select id="city">
+          <option value="islamabad">Islamabad</option>
+          <option value="rawalpindi">Rawalpindi</option>
+        </select>
+      </label>
+      <label>Facility type
+        <select id="type">
+          <option value="all">All types</option>
+          <option value="hospital">Hospitals</option>
+          <option value="clinic">Clinics</option>
+          <option value="pharmacy">Pharmacies</option>
+        </select>
+      </label>
+      <label>Search by name
+        <input id="search" type="search" placeholder="e.g. PIMS, Shifa, Rahat">
+      </label>
+    </div>
+    <div id="status" role="status" aria-live="polite">Loading…</div>
+    <ul id="list"></ul>
+  </aside>
+  <div id="map" aria-label="Interactive map of healthcare facilities"></div>
+</main>
+
+<footer>
+  Data: <a href="https://overpass-api.de/" target="_blank" rel="noopener">Overpass API</a> (OpenStreetMap data).
+  Map tiles and data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, ODbL.
+  Built with <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>. Completeness depends on volunteer mapping.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
